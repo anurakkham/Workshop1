@@ -1,0 +1,17 @@
+p#notice
+  = notice
+.container
+  .row
+    .col-sm-12
+      p
+        strong
+          | Item name:
+        = @product.item_name
+      p
+        strong
+          | Unit price:
+        = @product.unit_price
+      p
+        = image_tag attachment_url(@product, :product_image)
+      = link_to 'Edit', edit_product_path(@product) , class:'btn btn-default'
+      = link_to 'Back', products_path , class:'btn btn-default'
